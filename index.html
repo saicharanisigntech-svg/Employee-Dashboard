@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Profile | Isigntech</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-brand">
+        <span class="brand-name">Isigntech Employee</span>
+      </div>
+
+      <div class="user-card">
+        <img src="profile.jpeg" alt="Vurimi Sai Charan" class="user-avatar" />
+        <div class="user-info">
+          <p class="user-name">Vurimi Sai Charan</p>
+          <p class="user-role">Associate Software Engineer</p>
+          <p class="user-id">ID: 05072002</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">Dashboard</a></li>
+          <li><a href="#" class="nav-link active">My Profile</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+      <header class="topbar">
+        <h1 class="page-title">My Profile</h1>
+        <a href="#" class="signout-btn">Sign Out</a>
+      </header>
+
+      <div class="page-body">
+
+        <section class="profile-card">
+          <img src="profile.jpeg" alt="Vurimi Sai Charan" class="profile-photo" />
+          <div class="profile-info">
+            <div class="profile-name-row">
+              <h2 class="profile-name">Vurimi Sai Charan</h2>
+              <span class="active-badge">ACTIVE</span>
+            </div>
+            <p class="profile-role">Associate Software Engineer</p>
+            <p class="profile-meta">Hyderabad &nbsp;|&nbsp; Joined May 2026</p>
+          </div>
+          <div class="profile-buttons">
+            <a href="#" class="btn-outline">Message</a>
+            <a href="#" class="btn-primary">Edit Profile</a>
+          </div>
+        </section>
+
+        <div class="tabs-row">
+          <span class="tab active-tab" onclick="showTab('personal', this)">Personal Details</span>
+          <span class="tab"            onclick="showTab('job', this)">Job Information</span>
+          <span class="tab"            onclick="showTab('skills', this)">Skills</span>
+          <span class="tab"            onclick="showTab('about', this)">About</span>
+        </div>
+
+        <div id="personal" class="tab-content">
+          <div class="info-card">
+            <div class="card-header">
+              <h3 class="card-title">Personal Details</h3>
+            </div>
+            <div class="card-body">
+              <div class="info-row">
+                <p class="info-label">Email Address</p>
+                <a href="mailto:saicharan.isigntech@gmail.com" class="info-link">
+                    saicharan.isigntech@gmail.com
+                </a>
+              </div>
+              <div class="info-row">
+                <p class="info-label">Phone Number</p>
+                <a href="tel:+919420382715" class="info-link">+91 7780158419</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="job" class="tab-content hidden">
+          <div class="info-card">
+            <div class="card-header">
+              <h3 class="card-title">Job Information</h3>
+            </div>
+            <div class="card-body">
+              <div class="info-row">
+                <p class="info-label">Department</p>
+                <a class="info-value">Entry-level Software</a>
+              </div>
+              <div class="info-row">
+                <p class="info-label">Job Title</p>
+                <p class="info-value">Associate Software Engineer</p>
+              </div>
+              <div class="info-row">
+                <p class="info-label">Employee ID</p>
+                <p class="info-value">
+                  #05072002 - <span class="fulltime-badge">Full Time</span>
+                </p>
+              </div>
+              <div class="info-row">
+                <p class="info-label">Location</p>
+                <p class="info-value">Hyderabad, India</p>
+              </div>
+              <div class="info-row">
+                <p class="info-label">Date Joined</p>
+                <p class="info-value">May 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="skills" class="tab-content hidden">
+          <div class="info-card">
+            <div class="card-header">
+              <h3 class="card-title">Skills</h3>
+            </div>
+            <div class="card-body">
+              <div class="skills-row">
+                <span class="skill-tag highlight-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">DSA</span>
+                <span class="skill-tag">Problem-solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="about" class="tab-content hidden">
+          <div class="info-card">
+            <div class="card-header">
+              <h3 class="card-title">About</h3>
+            </div>
+            <div class="card-body">
+              <p class="about-text">
+                 Hi, I'm Sai Charan, a passionate Full Stack Java Developer and Frontend Learner.
+                 I enjoy building responsive and user-friendly web applications using HTML, CSS,
+                 JavaScript, React, Java, Spring Boot, and databases. I am continuously improving
+                 my skills by working on real-world projects and learning modern web development
+                 technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    function showTab(tabName, clickedTab) {
+      
+        var allSections = document.querySelectorAll('.tab-content');
+      for (var i = 0; i < allSections.length; i++) {
+        allSections[i].classList.add('hidden');
+      }
+
+      var allTabs = document.querySelectorAll('.tab');
+      for (var i = 0; i < allTabs.length; i++) {
+        allTabs[i].classList.remove('active-tab');
+      }
+
+      document.getElementById(tabName).classList.remove('hidden');
+      clickedTab.classList.add('active-tab');
+    }
+  </script>
+
+</body>
+</html>
