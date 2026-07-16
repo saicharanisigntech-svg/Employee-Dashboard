@@ -65,7 +65,7 @@ A lightweight JavaScript function (`showTab`) toggles hidden CSS classes (`.hidd
 ### How to Run Locally
 1. Download or clone this repository to your computer:
    ```bash
-   git clone https://github.com/your-username/employee-dashboard.git
+   https://github.com/saicharanisigntech-svg/Employee-Dashboard.git
 2. Make sure you have your profile picture inside the folder named exactly profile.jpeg.
 3. Open VS Code → File → Open Folder → Select the project directory.
 4. Right-click index.html and click "Open with Live Server" (or double-click the file to open directly in a browser).
